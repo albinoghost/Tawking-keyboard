@@ -8,6 +8,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
 
+import java.util.List;
+
 import dd.tawking.R;
 
 public class SimpleIME extends InputMethodService
@@ -19,7 +21,6 @@ public class SimpleIME extends InputMethodService
     private Keyboard ekeyboard;
 
     private boolean caps = false;
-    private boolean qwertykeyboard = true;
 
     @Override
     public void onKey(int primaryCode, int[] keyCodes) {
@@ -36,19 +37,13 @@ public class SimpleIME extends InputMethodService
                 kv.invalidateAllKeys();
                 break;
             case Keyboard.KEYCODE_DONE:
+
                 ic.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
                 break;
-           case Keyboard.KEYCODE_ALT: //case to switch from main keyboard to numbers and symbols
-              if (qwertykeyboard==true) {
-                 // TestKeys();
-                  SetNKeyboard();
-                  qwertykeyboard=false;
-                }
-               else {
-                  SetQKeyboard();
-                  qwertykeyboard=true;
-                }
+           case Keyboard.KEYCODE_ALT: //case to switch from main keyboard to numbers
+
                break;
+
             default:
                 char code = (char) primaryCode;
                 if (Character.isLetter(code) && caps) {
@@ -94,6 +89,7 @@ public class SimpleIME extends InputMethodService
         ekeyboard = new Keyboard(this, R.xml.emotes);
         kv.setKeyboard(qkeyboard);
         kv.setOnKeyboardActionListener(this);
+        kv.setPreviewEnabled(false);
         return kv;
     }
 
@@ -119,8 +115,7 @@ public class SimpleIME extends InputMethodService
         InputConnection ic = getCurrentInputConnection();
         for(int i=1; i<50; i++) {
             char code = (char)i;
-            String inc;
-            inc = String.valueOf(i);
+            String inc = String.valueOf(i);
             ic.commitText(inc ,1);
             ic.commitText(String.valueOf(code), 1);
         }
@@ -128,8 +123,7 @@ public class SimpleIME extends InputMethodService
 
         for(int i=51; i<100; i++) {
             char code = (char)i;
-            String inc;
-            inc = String.valueOf(i);
+            String inc = String.valueOf(i);
             ic.commitText(inc ,1);
             ic.commitText(String.valueOf(code), 1);
         }
@@ -137,8 +131,7 @@ public class SimpleIME extends InputMethodService
 
         for(int i=101; i<150; i++) {
             char code = (char)i;
-            String inc;
-            inc = String.valueOf(i);
+            String inc = String.valueOf(i);
             ic.commitText(inc ,1);
             ic.commitText(String.valueOf(code), 1);
         }

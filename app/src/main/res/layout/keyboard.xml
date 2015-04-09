@@ -4,7 +4,7 @@
     android:id="@+id/keyboard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/transparent"
+    android:background="@android:color/black"
     android:keyTextColor="@color/dim_foreground_material_dark"
     android:layout_alignParentBottom="true"
     android:keyPreviewLayout ="@layout/preview"

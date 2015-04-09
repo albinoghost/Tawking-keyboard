@@ -1,4 +1,58 @@
 <resources>
     <string name="app_name">Tawking</string>
     <string name="subtype_en_US">English (US)</string>
+
+
+    //Keyboard key size
+    <string name="KeyWidth">10px</string>
+    <string name="HorizontalGap">0px</string>
+    <string name="VerticalGap">0px</string>
+    <string name="KeyHeight">50px</string>
+
+
+    //Android Keyboard keycodes
+
+    <string name="keycode_0">48</string>
+    <string name="keycode_1">49</string>
+    <string name="keycode_2">50</string>
+    <string name="keycode_3">51</string>
+    <string name="keycode_4">52</string>
+    <string name="keycode_5">53</string>
+    <string name="keycode_6">54</string>
+    <string name="keycode_7">55</string>
+    <string name="keycode_8">56</string>
+    <string name="keycode_9">57</string>
+
+    <string name="keycode_a">97</string>
+    <string name="keycode_b">98</string>
+    <string name="keycode_c">99</string>
+    <string name="keycode_d">100</string>
+    <string name="keycode_e">101</string>
+    <string name="keycode_f">102</string>
+    <string name="keycode_g">103</string>
+    <string name="keycode_h">104</string>
+    <string name="keycode_i">105</string>
+    <string name="keycode_j">106</string>
+    <string name="keycode_k">107</string>
+    <string name="keycode_l">108</string>
+    <string name="keycode_m">109</string>
+    <string name="keycode_n">110</string>
+    <string name="keycode_o">111</string>
+    <string name="keycode_p">112</string>
+    <string name="keycode_q">113</string>
+    <string name="keycode_r">114</string>
+    <string name="keycode_s">115</string>
+    <string name="keycode_t">116</string>
+    <string name="keycode_u">117</string>
+    <string name="keycode_v">118</string>
+    <string name="keycode_w">119</string>
+    <string name="keycode_x">120</string>
+    <string name="keycode_y">121</string>
+    <string name="keycode_z">122</string>
+
+
+
+
 </resources>
+
+
